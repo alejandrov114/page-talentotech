@@ -1,0 +1,331 @@
+.navbar{
+    background: linear-gradient(90deg, #00c853, #b2ff59);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background 0.4s ease-in-out, padding 0.3s ease;
+}
+
+.navbar-brand img {
+    transition: transform 0.3s ease;
+}
+.navbar-brand img:hover {
+    transform: scale(1.1);
+}
+
+.navbar .nav-link {
+    color: white !important;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 10px 15px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover::after {
+    width: 100%;
+}
+
+.navbar .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    width: 0%;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease-in-out;
+}
+
+
+/* Efecto de cambio de color al hacer scroll */
+.navbar.scrolled {
+    background: linear-gradient(90deg, #2e7d32, #76ff03);
+    padding: 5px 0;
+}
+
+/* Botón hamburguesa color blanco */
+.navbar-toggler {
+    border: none;
+}
+.navbar-toggler-icon {
+    filter: invert(1);
+}
+
+/* Ajuste de scroll para que no se tape el contenido */
+section {
+    scroll-margin-top: 90px;
+}
+
+/* Altura fija para el carousel en desktop */
+.carousel-item img {
+    height: 80vh; /* 80% del alto de la ventana */
+    width: 100%;
+    object-fit: cover; /* Ajusta la imagen manteniendo proporción */
+    filter: brightness(85%); /* oscurece un poco para resaltar texto */
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+/* Efecto zoom suave al pasar el mouse */
+.carousel-item img:hover {
+    transform: scale(1.05);
+    filter: brightness(100%);
+}
+
+/* Botones de navegación más grandes y visibles */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Indicadores de posición más vistosos */
+.carousel-indicators [data-bs-target] {
+    background-color: white;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+.carousel-indicators .active {
+    opacity: 1;
+    background-color: #00c853;
+}
+
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro translúcido */
+    padding: 20px;
+    border-radius: 10px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.carousel-caption h2 {
+    font-size: 2.5rem;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+}
+
+.carousel-caption p {
+    font-size: 1.2rem;
+    color: #f1f1f1;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+    .carousel-caption {
+        padding: 10px;
+    }
+    .carousel-caption h2 {
+        font-size: 1.5rem;
+    }
+    .carousel-caption p {
+        font-size: 1rem;
+    }
+}
+
+/* Fondo suave para diferenciar la sección */
+#tipos {
+    background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+    padding: 60px 0;
+}
+
+/* Título central */
+#tipos h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #2e7d32;
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+#tipos h2::after {
+    content: "";
+    width: 80px;
+    height: 4px;
+    background: #00c853;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* Estilo para las cards */
+#tipos .card {
+    border: none;
+    border-radius: 15px;
+    text-align: center;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Íconos grandes */
+#tipos .card-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #388e3c;
+}
+
+/* Texto de la tarjeta */
+#tipos .card-text {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Efecto hover */
+#tipos .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Botones dentro de las cards */
+#tipos .btn-primary {
+    background: #00c853;
+    border: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+#tipos .btn-primary:hover {
+    background: #009624;
+}
+
+#tipos .card {
+    animation: fadeInUp 0.6s ease both;
+}
+#tipos .card:nth-child(1) { animation-delay: 0.1s; }
+#tipos .card:nth-child(2) { animation-delay: 0.2s; }
+#tipos .card:nth-child(3) { animation-delay: 0.3s; }
+#tipos .card:nth-child(4) { animation-delay: 0.4s; }
+#tipos .card:nth-child(5) { animation-delay: 0.5s; }
+#tipos .card:nth-child(6) { animation-delay: 0.6s; }
+
+#tipos .row {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#tipos .card {
+    margin: 10px;
+}
+
+#tipos {
+    padding-left: 30px;  /* margen interno izquierda */
+    padding-right: 30px; /* margen interno derecha */
+}
+
+
+/* Fondo general */
+#nosotros {
+    background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+    padding: 80px 20px;
+    border-radius: 20px;
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.05);
+}
+
+/* Título */
+#nosotros h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #2e7d32;
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+#nosotros h2::after {
+    content: "";
+    width: 80px;
+    height: 4px;
+    background: #00c853;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* Filas con más separación */
+#nosotros .row {
+    margin-bottom: 40px;
+}
+
+/* Tarjetas de Misión y Visión */
+#nosotros .col-md-6 {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px;
+}
+
+#nosotros .col-md-6:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* Títulos internos */
+#nosotros h4 {
+    font-size: 1.6rem;
+    color: #388e3c;
+    margin-bottom: 15px;
+}
+
+/* Objetivos */
+#nosotros ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+#nosotros ul li {
+    padding-left: 30px;
+    position: relative;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+#nosotros ul li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #00c853;
+    font-weight: bold;
+}
+
+/* Redes sociales */
+#nosotros .text-center a {
+    display: inline-block;
+    color: #fff;
+    background: #00c853;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    margin: 8px;
+    font-size: 1.6rem;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+#nosotros .text-center a:hover {
+    background: #009624;
+    transform: scale(1.1);
+}
+
+
+footer {
+    background-color: #b6e6a3;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 20px;
+}
