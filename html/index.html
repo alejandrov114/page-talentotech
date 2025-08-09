@@ -2,85 +2,365 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="..//img/electrozen.png" type="image/png">
-
-    <link rel="stylesheet" href="../css/style.css">
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../img/electrozen.png" type="image/png" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.css" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../javascript/graficas.js"></script>
 
     <title>ELECTROZEN</title>
 </head>
 
-<body style="background-color: #9ee6a6;">
-    <header class="text-center" style="background-color: #9ee6a6;">
-        
-        <nav class="navbar navbar-expand-lg bg-body-tertiary" >
-            <div class="container-fluid" style="background-color: #9ee6a6;">
-                <img src="/img/electrozen.png" alt="Logo" class="navbar-brand" style="width: 80px; height: 80px;">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="tipos.html">Tipos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="proyectos.html" >Proyectos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="nosotros.html">Nosotros</a>
-                        </li>
-                    </ul>
-                </div>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+        <div class="container-fluid">
+            <img src="../img/electrozen-removebg-preview.png" alt="Logo" class="navbar-brand"
+                style="width: 80px; height: 80px" />
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#inicio">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tipos">Tipos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#proyectos">Proyectos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#nosotros">Nosotros</a>
+                    </li>
+                </ul>
             </div>
-        </nav>
+        </div>
+    </nav>
+
+    <!-- INICIO -->
+    <section id="inicio" class="pt-5 mt-5">
         <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
-                <div class="carousel-item active" data-bs-interval="2000" >
-                    <img src="/img/Image1.jpeg" class="d-block w-100" alt="...">
+                <div class="carousel-item active" data-bs-interval="2000">
+                    <img src="/img/Image1.jpeg" class="d-block w-100" alt="..." />
+                    <div class="carousel-caption d-none d-md-block">
+                        <h1 class="fw-bold">Bienvenido a ElectroZen</h1>
+                        <h5>Innovación y sostenibilidad en un solo lugar</h5>
+                    </div>
                 </div>
+
                 <div class="carousel-item" data-bs-interval="2000">
-                    <img src="/img/Imagen2.jpeg" class="d-block w-100" alt="...">
+                    <img src="/img/Imagen2.jpeg" class="d-block w-100" alt="..." />
+                    <div class="carousel-caption d-none d-md-block">
+                        <h1 class="fw-bold">Energías Renovables</h1>
+                        <h5>Explora cómo trabajamos por un futuro limpio</h5>
+                    </div>
                 </div>
+
                 <div class="carousel-item" data-bs-interval="2000">
-                    <img src="/img/Imagen3.jpeg" class="d-block w-100" alt="...">
+                    <img src="/img/Imagen3.jpeg" class="d-block w-100" alt="..." />
+                    <div class="carousel-caption d-none d-md-block">
+                        <h1 class="fw-bold">Únete a nuestro proyecto</h1>
+                        <h5>Juntos podemos hacer el cambio</h5>
+                    </div>
                 </div>
             </div>
+
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
                 data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
             </button>
             <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
                 data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
             </button>
         </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <p>Explora nuestros proyectos, aprende sobre diferentes tipos de energía y descubre cómo puedes
-                        contribuir a un futuro más sostenible.</p>
+
+        <div class="container mt-4">
+            <p class="text-center">
+                Explora nuestros proyectos, aprende sobre diferentes tipos de energía
+                y descubre cómo puedes contribuir a un futuro más sostenible.
+            </p>
+        </div>
+    </section>
+
+
+    <!-- TIPOS -->
+    <section id="tipos" class="tainer my-5">
+        <h2 class="text-center mb-4">Tipos de Energía</h2>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="card h-100 shadow">
+                    <div class="card-body">
+                        <h5 class="card-title">🌞Energía Solar</h5>
+                        <p class="card-text">
+                            Proviene del sol y se convierte en electricidad o calor. Es
+                            limpia, renovable y cada vez más accesible.
+                        </p>
+                        <button class="btn btn-primary" onclick="mostrarGrafica('solar')">
+                            Ver gráfica
+                        </button>
+                        <div id="containerSolar" class="mt-3 d-none">
+                            <canvas id="graficoSolar" height="150"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 shadow">
+                    <div class="card-body">
+                        <h5 class="card-title">🍃Energía Eólica</h5>
+                        <p class="card-text">
+                            Se genera a través del viento mediante aerogeneradores. Es una
+                            fuente renovable que no contamina.
+                        </p>
+                        <button class="btn btn-primary" onclick="mostrarGrafica('eolica')">
+                            Ver gráfica
+                        </button>
+                        <div id="containerEolica" class="mt-3 d-none">
+                            <canvas id="graficoEolica" height="150"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 shadow">
+                    <div class="card-body">
+                        <h5 class="card-title">💧 Energía Hidroeléctrica</h5>
+                        <p class="card-text">
+                            Utiliza la fuerza del agua en movimiento para generar
+                            electricidad. Es muy usada en grandes represas.
+                        </p>
+
+                        <button class="btn btn-primary" onclick="mostrarGrafica('hidro')">
+                            Ver gráfica
+                        </button>
+                        <div id="containerHidro" class="mt-3 d-none">
+                            <canvas id="graficoHidro" height="150"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 shadow">
+                    <div class="card-body">
+                        <h5 class="card-title">🌋 Energía Geotérmica</h5>
+                        <p class="card-text">
+                            Aprovecha el calor del interior de la Tierra para producir
+                            electricidad o calefacción.
+                        </p>
+                        <button class="btn btn-primary" onclick="mostrarGrafica('geotermica')">
+                            Ver gráfica
+                        </button>
+                        <div id="containerGeotermica" class="mt-3 d-none">
+                            <canvas id="graficoGeotermica" height="150"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 shadow">
+                    <div class="card-body">
+                        <h5 class="card-title">🌱 Energía Biomasa</h5>
+                        <p class="card-text">
+                            Proviene de materiales orgánicos como residuos agrícolas o
+                            madera. Puede generar electricidad o biocombustibles.
+                        </p>
+                        <button class="btn btn-primary" onclick="mostrarGrafica('biomasa')">
+                            Ver gráfica
+                        </button>
+                        <div id="containerBiomasa" class="mt-3 d-none">
+                            <canvas id="graficoBiomasa" height="150"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 shadow">
+                    <div class="card-body">
+                        <h5 class="card-title">🛢️ Energía Fósil</h5>
+                        <p class="card-text">
+                            Incluye el petróleo, el gas y el carbón. Son fuentes limitadas y
+                            contaminantes.
+                        </p>
+                        <button class="btn btn-primary" onclick="mostrarGrafica('nuclear')">
+                            Ver gráfica
+                        </button>
+                        <div id="containerNuclear" class="mt-3 d-none">
+                            <canvas id="graficoNuclear" height="150"></canvas>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+    </section>
 
-    </header>
 
+    <!-- espacio para video -->
+
+    <div class=" my-5 text-center">
+        <h1 class="mb-4" style="color: #00c853; font-weight: bold;">Energías Renovables </h1>
+        <video src="../img/ENERGÍAS RENOVABLES y NO RENOVABLES - Tipos de energía.mp4" width="60%" controls
+            onmouseover="this.play()" onmouseout="this.pause(); this.currentTime = 0;"
+            style="border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.1);">
+            Tu navegador no soporta la reproducción de video.
+        </video>
+    </div>
+
+    <!-- PROYECTOS -->
+    <section id="proyectos" class="container-lg my-5">
+        <h2 class="text-center mb-4">Proyectos Reales por Departamento</h2>
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            <!-- Atlántico -->
+            <div class="col">
+                <div class="card h-100 shadow">
+                    <div class="card-body">
+                        <h5 class="card-title">🏙️ Atlántico - Guayepo I &amp; II</h5>
+                        <p class="card-text">
+                            Parque Fotovoltaico de ~486 MW en Ponedera/Sabanalarga, con
+                            >820.000 paneles y impacto energético para 1,5 millones de
+                            personas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 shadow">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            🌳 Atlántico - Bosques Solares de Bolívar
+                        </h5>
+                        <p class="card-text">
+                            Planta solar de 100 MW con áreas de conservación, inaugurada en
+                            2024 en Sabanalarga, apuntando a biodiversidad y energía limpia.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cesar -->
+            <div class="col">
+                <div class="card h-100 shadow">
+                    <div class="card-body">
+                        <h5 class="card-title">☀️ Cesar - Parque Solar La Loma</h5>
+                        <p class="card-text">
+                            Proyecto de 187 MWdc y 400.000 paneles en El Paso. Energía
+                            suficiente para 600.000 personas y reducción de 190 000 t
+                            CO₂/año.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 shadow">
+                    <div class="card-body">
+                        <h5 class="card-title">🌞 Cesar - Parque Solar El Paso</h5>
+                        <p class="card-text">
+                            Capacidad de 86,2 MW para abastecer unos 100.000 hogares con
+                            energía limpia y confiable.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Meta -->
+            <div class="col">
+                <div class="card h-100 shadow">
+                    <div class="card-body">
+                        <h5 class="card-title">🔆 Meta - San Fernando Solar</h5>
+                        <p class="card-text">
+                            61 MW con paneles bifaciales en Castilla La Nueva; energía para
+                            93.000 hogares y evita 508.000 t CO₂ en 15 años.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 shadow">
+                    <div class="card-body">
+                        <h5 class="card-title">⚡ Meta - Parque Castilla Solar</h5>
+                        <p class="card-text">
+                            Generación de 21 MW en zona petrolera; abastece unos 27.000
+                            habitantes y ahorra 154.000 t CO₂ (equiv. a 16.200 árboles).
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Caldas -->
+            <div class="col">
+                <div class="card h-100 shadow">
+                    <div class="card-body">
+                        <h5 class="card-title">🌍 Caldas - Portón del Sol</h5>
+                        <p class="card-text">
+                            Parque solar de 102 MW en La Dorada, consolidando el impulso de
+                            la energía solar en el centro de Colombia.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NOSOTROS -->
+    <section id="nosotros" class="container py-5">
+        <h2 class="text-center mb-4">Nosotros</h2>
+        <div class="row mb-4">
+            <div class="col-md-6 mx-2">
+                <h4>🎯 Misión</h4>
+                <p>Promover el uso responsable y consciente de la energía...</p>
+            </div>
+            <div class="col-md-6">
+                <h4>👁️ Visión</h4>
+                <p>
+                    Ser una plataforma líder en educación energética y conciencia
+                    ecológica...
+                </p>
+            </div>
+        </div>
+        <div class="mb-4">
+            <h4>🎯 Objetivos</h4>
+            <ul>
+                <li>
+                    Difundir conocimiento sobre energías renovables y sostenibilidad.
+                </li>
+                <li>Apoyar proyectos reales de impacto ambiental positivo.</li>
+                <li>Promover hábitos responsables en el consumo energético.</li>
+                <li>Generar conciencia ecológica desde la educación temprana.</li>
+            </ul>
+        </div>
+        <div class="text-center">
+            <h5 class="mb-3">Síguenos en redes sociales</h5>
+            <a href="https://www.facebook.com/" target="_blank" class="mx-2">
+                <i class="bi bi-facebook" style="font-size: 2rem"></i>
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" class="mx-2">
+                <i class="bi bi-instagram" style="font-size: 2rem"></i>
+            </a>
+            <a href="https://www.twitter.com/" target="_blank" class="mx-2">
+                <i class="bi bi-twitter-x" style="font-size: 2rem"></i>
+            </a>
+            <a href="https://www.youtube.com/" target="_blank" class="mx-2">
+                <i class="bi bi-youtube" style="font-size: 2rem"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <!-- FOOTER -->
     <footer class="text-center mt-4">
         <p>&copy; 2023 ELECTROZEN. Todos los derechos reservados.</p>
-        <p>Desarrollado por []</p>
+        <p>Desarrollado por MACC <i class="bi bi-laptop"></i></p>
     </footer>
+</body>
+
+</html>
 </body>
 
 </html>
